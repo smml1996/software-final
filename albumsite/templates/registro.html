@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="main-div">
+  <div class="row justify-content-center">
+    <img class="align-self-center mr-3 logo" src="{% static 'img/pinche-logo.png' %}" alt="logo" />
+  </div>
+  <div style="margin-top:3em;" class="row justify-content-center">
+    <div class="col-md-auto">
+      <h1 style="color:#a5281f"><b>REGÍSTRATE</b></h1>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <form method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        {% for error in field.errors %}
+         <p style="color: red">{{ error }}</p>
+       {% endfor %}
+      <div class="row ">
+
+        <div class="input-group mb-5">
+          <div class="input-group-prepend">
+            <span id="basic-addon{{field.html_name}}" class="oi oi-person input-group-text"></span>
+          </div>
+          <input type="{% if field.html_name == "password1" or field.html_name == "password2"  %}password{% else %} text {% endif %}"
+              class="form-control" placeholder="{{field.label}}" name="{{ field.html_name }}"
+                            aria-describedby="basic-addon1{{field.html_name}}">
+        </div>
+     </div>
+     {% endfor %}
+     <div class="row justify-content-center">
+
+       <div class="col-6">
+         <button  class="btn btn-default cus-buttom" type="submit">Regístrate</button>
+       </div>
+     </div>
+    </form>
+
+  </div>
+</div>
+{% endblock content %}

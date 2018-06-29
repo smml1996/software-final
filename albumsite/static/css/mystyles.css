@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'YourFontName'; /*a name to be used later*/
+    src: url('../fonts/fifa-font.ttf'); /*URL to font*/
+}
+
+body{
+  font-family: 'YourFontName';
+}
+.main-div{
+  height: inherit;
+  background-image: url("../img/fondo-registrate.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: rgb(201, 76, 76);
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 999;
+}
+
+.logo{
+  max-height: 15vh;
+}
+
+.cus-buttom{
+  background-color: #a5281f;
+  color: #c5bc99;
+  border: none;
+}

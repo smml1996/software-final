@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="main-div">
+  <div class="row float-right">
+    <div class="container" style="margin-right:2em;">
+    <a href="{% url 'logout' %}">logout</a>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:10vh;">
+    <div class="container col-6" style="padding-left:3em;">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Figuritas Diarias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Intercambio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Código</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <!-- figurtias diarias -->
+          <div class="row justify-content-center">
+            <img class="align-self-center mr-3" src="{% static 'img/imagen-diaria.png' %}" alt="logo" />
+          </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <!-- intercambio -->
+
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          <!-- codigo -->
+
+        </div>
+      </div>
+    </div>
+    <div class="container col-6" style="padding-right:3em;">
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Figuritas Diarias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Intercambio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Código</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

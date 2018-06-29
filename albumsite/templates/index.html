@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="main-div">
+  <div class="row justify-content-center">
+    <img class="align-self-center mr-3 logo" src="{% static 'img/pinche-logo.png' %}" alt="logo" />
+  </div>
+  <div style="margin-top:3em;" class="row justify-content-center">
+    <div class="col-md-auto">
+      <h1 style="color:#a5281f"><b>ALBUM VIRTUAL</b></h1>
+    </div>
+  </div>
+  <div style="margin-top:3em;" class="row justify-content-center">
+    <form method="post">
+      {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+        {% csrf_token %}
+        <div class="row">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span id="basic-addon1" class="oi oi-person input-group-text"></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" name="{{ form.username.html_name }}"  aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text oi oi-key" id="basic-addon2"></span>
+            </div>
+            <input type="password" class="form-control" placeholder="password" name="{{ form.password.html_name }}"  aria-label="password" aria-describedby="basic-addon2">
+          </div>
+        </div>
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <a  href="{% url 'registro' %}" class="btn btn-default cus-buttom" >Regístrate</a>
+        </div>
+        <div class="col-6">
+          <button  class="btn btn-default cus-buttom" type="submit">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}
