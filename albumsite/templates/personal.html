@@ -1,11 +1,24 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<div class="main-div">
+<style>
+.div1 {
+    width: 20vw;
+    height: 30vh;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+<div class="main-div ">
+
   <div class="row float-right">
     <div class="container" style="margin-right:2em;">
     <a href="{% url 'logout' %}">logout</a>
     </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <h2 style="color:red">{{message}}</h2>
   </div>
 
   <div class="row" style="margin-top:10vh;">
@@ -24,42 +37,501 @@
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <!-- figurtias diarias -->
-          <div class="row justify-content-center">
-            <img class="align-self-center mr-3" src="{% static 'img/imagen-diaria.png' %}" alt="logo" />
+          {% if isNewDay %}
+
+          <div id="buttonNewFiguritas" class="row justify-content-center">
+            <button onclick="toggleFiguritas()" data-toggle="modal" data-target="#exampleModal" style="background-color:rgba(255,255,255,0); border:none"><img style="max-height:40vh; margin-top:3em;" class="align-self-center mr-3" src="{% static 'img/imagen-diaria.png' %}" alt="logo" /></button>
           </div>
+          <div id="updateDiv" style="display:none">
+            <h1> Ya reclamaste tus figuritas diarias</h1>
+          </div>
+          {% else %}
+          <div class="row justify-content-center">
+            <h1> Ya reclamaste tus figuritas diarias</h1>
+          </div>
+          {% endif %}
         </div>
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
           <!-- intercambio -->
-
+          <div class="row justify-content-center">
+            <div class="col-s6">
+              <div class="row"> <h3>Doy</h3></div>
+              <div id="doy" style="background-color:rgb(255,255,255)" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+              </div>
+            </div>
+            <div class="col-s6">
+              <div class="row"> <h3>recibo</h3></div>
+              <div id="busco" style="background-color:rgb(255,255,255)" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <button onclick="call_transaccion()" class="btn btn-default cus-buttom">Hacer Peticiones</button>
+            </div>
+          </div>
         </div>
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
           <!-- codigo -->
+          <form method="POST" action="{% url 'masFiguras' %}">
+            {% csrf_token %}
+            <div style="margin-top:2em;" class="row justify-content-center">
+            {{ form.as_p }}
+          </div>
+            <div class="row justify-content-center">
+              <button class="btn btn-default cus-buttom">Obtener Figuritas</button>
+            </div>
+          </form>
 
         </div>
       </div>
     </div>
     <div class="container col-6" style="padding-right:3em;">
-      <div class="card text-center">
-        <div class="card-header">
-          <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Figuritas Diarias</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Intercambio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Código</a>
-            </li>
-          </ul>
+      <div style="margin-top: 5em;" class="row justify-content-center">
+        <a href="{% url 'albumpersonal' %}" target="_blank"><img style="max-height:40vh;" class="align-self-center mr-3 " src="{% static 'img/portada.jpg' %}" alt="logo" /></a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- bottom -->
+
+
+<div style="margin-top:1em;" class="row justify-content-center">
+  <div class-"col-1">
+    <button onclick="nav_left()"> <span class="oi oi-arrow-thick-left"></span></button>
+  </div>
+    <div id="cards-deck" class="card-deck col-10">
+
+    </div>
+  <div class-"col-1">
+    <button onclick="nav_right()"> <span class="oi oi-arrow-thick-right"></span></button>
+  </div>
+  </div>
+  <div style="margin-top:1em;" class="row justify-content-center">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button onclick="load_todas()" type="button" class="btn btn-secondary">todas</button>
+      <button onclick="load_repetidas()" type="button" class="btn btn-secondary">repetidas</button>
+      <button onclick="load_nuevas()" type="button" class="btn btn-secondary">nuevas</button>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tus nuevas figuritas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="card col-s3">
+            <img id="img1" class="card-img-top" src=".../100px180/" alt="Card image cap">
+          </div>
+          <div class="card col-s3">
+            <img id="img2" class="card-img-top" src=".../100px180/" alt="Card image cap">
+          </div>
+          <div class="card col-s3">
+            <img id="img3" class="card-img-top" src=".../100px180/" alt="Card image cap">
+          </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+        <div class="row justify-content-center">
+          <div class="card col-s3">
+            <img id="img4" class="card-img-top" src=".../100px180/" alt="Card image cap">
+          </div>
+          <div class="card col-s3">
+            <img id="img5" class="card-img-top" src=".../100px180/" alt="Card image cap">
+          </div>
         </div>
+        <div class="row justify-content-center">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
+
+
+<script>
+
+function call_transaccion(){
+  var doyArr =[];
+  var reciboArr=[];
+  $('#doy').find('input').each(function(){
+    doyArr.push($(this).attr('value'));
+  });
+
+  $('#busco').find('input').each(function(){
+    reciboArr.push($(this).attr('value'));
+  });
+
+  $.ajax({
+    url: "{% url 'cambiape' %}",
+    data: {
+      'doy':doyArr,
+      'busco':reciboArr
+    },
+    dataType: 'json',
+    success: function (data) {
+      alert("Peticiones realizadas con éxito");
+    }
+  });
+};
+ </script>
+<script>
+
+
+  var count = 1;
+  var isActiveTodas = true;
+  var isActiveRepetidas=false;
+  var isActiveNuevas= false;
+
+  var limitA = 0;
+  var limitB = 6;
+  function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        console.log(ev.target.id);
+    }
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+
+  function getPosLastSlash(s){
+    var i;
+
+    for (i = s.length -1; i>=0; i--){
+      if(s[i]=='/')return i;
+    }
+  }
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    var e = document.createElement('input');
+    e.value=(document.getElementById(data).src).substring(getPosLastSlash(document.getElementById(data).src)+1, document.getElementById(data).src.len);
+    ev.target.appendChild(e);
+  }
+
+  function nav_right(){
+    if( true){
+      document.getElementById('cards-deck').innerHTML = '';
+      limitA = limitB+1
+      limitB = limitA+6;
+      if (isActiveRepetidas){
+        {% for s in repetidas %}
+          if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+            var e = document.createElement('div');
+            e.className = "card";
+            e.style.maxWidth="10vw";
+            var imagen = document.createElement('img');
+            imagen.className= "card-img-top";
+            imagen.style.maxWidth = "10vw";
+            imagen.id="img{{s}}"
+            //imagen.ondragstart="drag(event)";
+            imagen.addEventListener("dragstart", function(ev){
+              ev.dataTransfer.setData("text", ev.target.id);
+              console.log(ev.target.id);
+            });
+
+            imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+            imagen.alt = "card image cap";
+            imagen.draggable ="true";
+
+            var bodyCard= document.createElement('div');
+            bodyCard.className = "card-body";
+            e.append(imagen);
+            e.append(bodyCard);
+            document.getElementById('cards-deck').append(e);
+          }
+        {% endfor %}
+      }else if(isActiveTodas){
+        {% for s in todas %}
+          if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+            var e = document.createElement('div');
+            e.className = "card";
+
+            e.style.maxWidth="10vw";
+            var imagen = document.createElement('img');
+            imagen.id="img{{s}}";
+            imagen.addEventListener("dragstart", function(ev){
+              ev.dataTransfer.setData("text", ev.target.id);
+              console.log(ev.target.id);
+            });
+            imagen.className= "card-img-top";
+            imagen.draggable ="true";
+            imagen.ondragstart="drag(event)";
+            imagen.style.maxWidth = "10vw";
+            imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+            imagen.alt = "card image cap";
+            var bodyCard= document.createElement('div');
+            bodyCard.className = "card-body";
+            e.append(imagen);
+            e.append(bodyCard);
+            document.getElementById('cards-deck').append(e);
+          }
+        {% endfor %}
+      }else{
+        {% for s in figuritas %}
+          if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+            var e = document.createElement('div');
+            e.className = "card";
+            e.style.maxWidth="10vw";
+            var imagen = document.createElement('img');
+            imagen.id="img{{s}}";
+            imagen.className= "card-img-top";
+            imagen.style.maxWidth = "10vw";
+            imagen.draggable ="true";
+            imagen.addEventListener("dragstart", function(ev){
+              ev.dataTransfer.setData("text", ev.target.id);
+              console.log(ev.target.id);
+            });
+            imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+            imagen.alt = "card image cap";
+            var bodyCard= document.createElement('div');
+            bodyCard.className = "card-body";
+            e.append(imagen);
+            e.append(bodyCard);
+            document.getElementById('cards-deck').append(e);
+          }
+        {% endfor %}
+      }
+    }
+  }
+
+  function nav_left(){
+    if( limitB > 6){
+      document.getElementById('cards-deck').innerHTML = '';
+      limitB = limitA-1;
+      limitA = limitB-6;
+      if (isActiveRepetidas){
+        {% for s in repetidas %}
+          if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+            var e = document.createElement('div');
+            e.className = "card";
+            e.style.maxWidth="10vw";
+            var imagen = document.createElement('img');
+            imagen.id="img{{s}}";
+            imagen.className= "card-img-top";
+            imagen.style.maxWidth = "10vw";
+            imagen.draggable ="true";
+            imagen.addEventListener("dragstart", function(ev){
+              ev.dataTransfer.setData("text", ev.target.id);
+              console.log(ev.target.id);
+            });
+            imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+            imagen.alt = "card image cap";
+            var bodyCard= document.createElement('div');
+            bodyCard.className = "card-body";
+            e.append(imagen);
+            e.append(bodyCard);
+            document.getElementById('cards-deck').append(e);
+          }
+        {% endfor %}
+      }else if(isActiveTodas){
+        {% for s in todas %}
+          if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+            var e = document.createElement('div');
+            e.className = "card";
+            e.style.maxWidth="10vw";
+            var imagen = document.createElement('img');
+            imagen.id="img{{s}}";
+            imagen.className= "card-img-top";
+            imagen.style.maxWidth = "10vw";
+            imagen.draggable ="true";
+            imagen.addEventListener("dragstart", function(ev){
+              ev.dataTransfer.setData("text", ev.target.id);
+              console.log(ev.target.id);
+            });
+            imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+            imagen.alt = "card image cap";
+            var bodyCard= document.createElement('div');
+            bodyCard.className = "card-body";
+            e.append(imagen);
+            e.append(bodyCard);
+            document.getElementById('cards-deck').append(e);
+          }
+        {% endfor %}
+      }else{
+        {% for s in figuritas %}
+          if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+            var e = document.createElement('div');
+            e.className = "card";
+            e.style.maxWidth="10vw";
+            var imagen = document.createElement('img');
+            imagen.id="img{{s}}";
+            imagen.className= "card-img-top";
+            imagen.style.maxWidth = "10vw";
+            imagen.draggable ="true";
+            imagen.addEventListener("dragstart", function(ev){
+              ev.dataTransfer.setData("text", ev.target.id);
+              console.log(ev.target.id);
+            });
+            imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+            imagen.alt = "card image cap";
+            var bodyCard= document.createElement('div');
+            bodyCard.className = "card-body";
+            e.append(imagen);
+            e.append(bodyCard);
+            document.getElementById('cards-deck').append(e);
+          }
+        {% endfor %}
+      }
+    }
+  }
+
+  function load_repetidas(){
+    count = 1;
+    isActiveTodas=false;
+    isActiveNuevas=false;
+    isActiveRepetidas=true;
+    var limitA = 0;
+    var limitB = 6;
+    document.getElementById('cards-deck').innerHTML = '';
+    {% for s in repetidas %}
+      if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+        var e = document.createElement('div');
+        e.className = "card";
+        e.style.maxWidth="10vw";
+        var imagen = document.createElement('img');
+        imagen.id="img{{s}}";
+        imagen.className= "card-img-top";
+        imagen.style.maxWidth = "10vw";
+        imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+        imagen.draggable ="true";
+        imagen.addEventListener("dragstart", function(ev){
+          ev.dataTransfer.setData("text", ev.target.id);
+          console.log(ev.target.id);
+        });
+        imagen.alt = "card image cap";
+        var bodyCard= document.createElement('div');
+        bodyCard.className = "card-body";
+        e.append(imagen);
+        e.append(bodyCard);
+        document.getElementById('cards-deck').append(e);
+      }
+    {% endfor %}
+  }
+
+  function load_nuevas(){
+    count = 1;
+    isActiveTodas=false;
+    isActiveNuevas=true;
+    isActiveRepetidas=false;
+    var limitA = 0;
+    var limitB = 6;
+
+    document.getElementById('cards-deck').innerHTML = '';
+    {% for s in figuritas %}
+      if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+        var e = document.createElement('div');
+        e.className = "card";
+        e.style.maxWidth="10vw";
+        var imagen = document.createElement('img');
+        imagen.id="img{{s}}";
+        imagen.className= "card-img-top";
+        imagen.style.maxWidth = "10vw";
+        imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+        imagen.draggable ="true";
+        imagen.addEventListener("dragstart", function(ev){
+          ev.dataTransfer.setData("text", ev.target.id);
+          console.log(ev.target.id);
+        });
+        imagen.alt = "card image cap";
+        var bodyCard= document.createElement('div');
+        bodyCard.className = "card-body";
+        e.append(imagen);
+        e.append(bodyCard);
+        document.getElementById('cards-deck').append(e);
+      }
+    {% endfor %}
+
+  }
+
+  function load_todas(){
+    count = 1;
+    isActiveTodas=false;
+    isActiveNuevas=true;
+    isActiveRepetidas=false;
+    var limitA = 0;
+    var limitB = 6;
+
+    document.getElementById('cards-deck').innerHTML = '';
+
+    {% for s in todas %}
+      if({{ forloop.counter0 }} >=limitA && {{ forloop.counter0}}<=limitB){
+        var e = document.createElement('div');
+        e.className = "card";
+        e.style.maxWidth="10vw";
+        var imagen = document.createElement('img');
+        imagen.id="img{{s}}";
+        imagen.className= "card-img-top";
+        imagen.style.maxWidth = "10vw";
+        imagen.draggable ="true";
+        imagen.addEventListener("dragstart", function(ev){
+          ev.dataTransfer.setData("text", ev.target.id);
+          console.log(ev.target.id);
+        });
+        imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+        imagen.alt = "card image cap";
+        var bodyCard= document.createElement('div');
+        bodyCard.className = "card-body";
+        e.append(imagen);
+        e.append(bodyCard);
+        document.getElementById('cards-deck').append(e);
+      }
+    {% endfor %}
+  }
+  function toggleFiguritas(){
+
+    document.getElementById('updateDiv').style.display = "block";
+    document.getElementById('buttonNewFiguritas').style.display = "none";
+    count = 1;
+
+    {% for s in figuritas %}
+      document.getElementById('img' + count.toString()).src="../static/img/figuritas/{{s}}.jpg";
+      count= count +1;
+    {% endfor %}
+  }
+
+  {% if isCodigoValid %}
+    $("#exampleModal").modal();
+    count=1;
+    {% for s in figuritas %}
+      document.getElementById('img' + count.toString()).src="../../static/img/figuritas/{{s}}.jpg";
+      count= count +1;
+    {% endfor %}
+  {% endif %}
+
+  count=1;
+
+  {% for s in todas|slice:":7" %}
+
+    var e = document.createElement('div');
+    e.className = "card";
+    e.style.maxWidth="10vw";
+    var imagen = document.createElement('img');
+    imagen.id="img{{s}}";
+    imagen.className= "card-img-top";
+    imagen.style.maxWidth = "10vw";
+    imagen.src= "../../static/img/figuritas/{{s}}.jpg";
+    imagen.draggable ="true";
+    imagen.addEventListener("dragstart", function(ev){
+      ev.dataTransfer.setData("text", ev.target.id);
+      console.log(ev.target.id);
+    });
+    imagen.alt = "card image cap";
+    var bodyCard= document.createElement('div');
+    bodyCard.className = "card-body";
+    e.append(imagen);
+    e.append(bodyCard);
+    document.getElementById('cards-deck').append(e);
+  {% endfor %}
+
+
+</script>
 {% endblock content %}

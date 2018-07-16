@@ -1,0 +1,1959 @@
+{% load staticfiles %}
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}" media="screen,projection">
+
+<script type="text/javascript" src="{% static 'js/jquery.min.1.7.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modernizr.2.5.3.min.js' %}"></script>
+
+<style>
+@font-face {
+    font-family: 'YourFontName'; /*a name to be used later*/
+    src: url({% static 'fonts/fifa-font.ttf' %}); /*URL to font*/
+}
+
+body{
+  font-family: 'YourFontName';
+}
+.main-div{
+  height: inherit;
+  background-image: url("../img/fondo-registrate.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: rgb(201, 76, 76);
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 999;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div style="background-image:url({% static 'img/portada.jpg' %});"></div>
+			<!-- comienzo pais 1 -->
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Rusia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+					  <img id="player1-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player1-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player1-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player1-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player1-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player1-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player1-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player1-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player1-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player1-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player1-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player1-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 1 -->
+
+
+
+			<!-- comienzo pais 2 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Arabia Saudí</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player2-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player2-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player2-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player2-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player2-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player2-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player2-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player2-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player2-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player2-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player2-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player2-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 2 -->
+
+
+
+			<!-- comienzo pais 3 -->
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Egipto</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player3-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player3-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player3-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player3-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player3-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player3-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player3-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player3-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player3-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player3-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player3-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player3-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 3 -->
+
+
+			<!-- comienzo pais 4 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Uruguay</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player4-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player4-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player4-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player4-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player4-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player4-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player4-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player4-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player4-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player4-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player4-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player4-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 4 -->
+
+			<!-- comienzo pais 5 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Portugal</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player5-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player5-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player5-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player5-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player5-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player5-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player5-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player5-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player5-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player5-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player5-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player5-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 5 -->
+
+
+			<!-- comienzo pais 6 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">España</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player6-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player6-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player6-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player6-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player6-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player6-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player6-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player6-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player6-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player6-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player6-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player6-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 6 -->
+
+			<!-- comienzo pais 7 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Marruecos</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player7-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player7-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player7-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player7-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player7-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player7-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player7-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player7-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player7-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player7-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player7-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player7-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 7 -->
+
+
+			<!-- comienzo pais 8 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">RI de Irán</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player8-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player8-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player8-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player8-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player8-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player8-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player8-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player8-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player8-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player8-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player8-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player8-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 8 -->
+
+
+			<!-- comienzo pais 9 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Francia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player9-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player9-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player9-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player9-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player9-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player9-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player9-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player9-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player9-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player9-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player9-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player9-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 9 -->
+
+
+			<!-- comienzo pais 10 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Australia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player10-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player10-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player10-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player10-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player10-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player10-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player10-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player10-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player10-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player10-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player10-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player10-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 10 -->
+
+			<!-- comienzo pais 11 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Perú</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player11-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player11-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player11-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player11-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player11-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player11-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player11-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player11-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player11-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player11-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player11-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player11-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 11 -->
+
+			<!-- comienzo pais 12 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Dinamarca</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player12-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player12-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player12-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player12-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player12-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player12-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player12-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player12-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player12-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player12-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player12-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player12-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 12 -->
+
+
+
+
+			<!-- comienzo pais 13 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Argentina</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player13-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player13-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player13-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player13-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player13-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player13-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player13-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player13-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player13-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player13-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player13-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player13-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 13 -->
+
+
+
+			<!-- comienzo pais 14 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Islandia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player14-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player14-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player14-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player14-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player14-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player14-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player14-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player14-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player14-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player14-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player14-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player14-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 14 -->
+
+
+			<!-- comienzo pais 15 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Croacia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player15-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player15-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player15-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player15-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player15-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player15-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player15-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player15-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player15-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player15-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player15-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player15-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 15 -->
+
+
+
+
+			<!-- comienzo pais 16 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Nigeria</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player16-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player16-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player16-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player16-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player16-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player16-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player16-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player16-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player16-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player16-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player16-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player16-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 16 -->
+
+
+			<!-- comienzo pais 17 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Brasil</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player17-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player17-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player17-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player17-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player17-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player17-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player17-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player17-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player17-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player17-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player17-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player17-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 17 -->
+
+
+			<!-- comienzo pais 18 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Suiza</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player18-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player18-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player18-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player18-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player18-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player18-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player18-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player18-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player18-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player18-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player18-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player18-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 18 -->
+
+
+			<!-- comienzo pais 19 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Costa Rica</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player19-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player19-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player19-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player19-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player19-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player19-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player19-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player19-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player19-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player19-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player19-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player19-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 19 -->
+
+
+			<!-- comienzo pais 20 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Serbia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player20-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player20-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player20-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player20-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player20-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player20-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player20-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player20-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player20-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player20-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player20-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player20-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 20 -->
+
+
+
+			<!-- comienzo pais 21 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Alemania</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player21-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player21-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player21-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player21-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player21-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player21-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player21-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player21-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player21-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player21-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player21-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player21-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 21 -->
+
+
+
+			<!-- comienzo pais 22 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">México</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player22-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player22-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player22-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player22-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player22-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player22-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player22-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player22-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player22-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player22-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player22-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player22-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 22 -->
+
+
+			<!-- comienzo pais 23 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Suecia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player23-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player23-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player23-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player23-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player23-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player23-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player23-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player23-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player23-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player23-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player23-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player23-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 23 -->
+
+
+			<!-- comienzo pais 24 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">República de Corea</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player24-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player24-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player24-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player24-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player24-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player24-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player24-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player24-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player24-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player24-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player24-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player24-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 24 -->
+
+			<!-- comienzo pais 25 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;"></h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player25-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player25-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player25-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player25-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player25-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player25-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player25-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player25-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player25-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player25-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player25-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player25-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 25 -->
+
+
+			<!-- comienzo pais 26 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Bélgica</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player26-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player26-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player26-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player26-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player26-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player26-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player26-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player26-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player26-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player26-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player26-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player26-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 26 -->
+
+
+			<!-- comienzo pais 27 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Panamá</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player27-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player27-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player27-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player27-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player27-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player27-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player27-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player27-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player27-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player27-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player27-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player27-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 27-->
+
+			<!-- comienzo pais 28 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Túnez</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player28-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player28-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player28-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player28-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player28-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player28-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player28-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player28-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player28-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player28-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player28-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player28-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 28 -->
+
+
+			<!-- comienzo pais 29 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Inglaterra</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player29-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player29-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player29-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player29-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player29-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player29-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player29-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player29-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player29-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player29-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player29-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player29-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 29 -->
+
+			<!-- comienzo pais 30 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Polonia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player30-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player30-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player30-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player30-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player30-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player30-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player30-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player30-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player30-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player30-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player30-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player30-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 30 -->
+
+
+			<!-- comienzo pais 31 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Senegal</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player31-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player31-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player31-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player31-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player31-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player31-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player31-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player31-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player31-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player31-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player31-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player31-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 31 -->
+
+			<!-- comienzo pais 32 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Colombia</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player32-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player32-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player32-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player32-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player32-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player32-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player32-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player32-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player32-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player32-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player32-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player32-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 32 -->
+
+
+			<!-- comienzo pais 33 -->
+			<div style="background-color:#b2dfdb;" class="main-div">
+				<div class="row"><h1 style="margin-left:1em;">Japón</h1></div>
+				<div style ="margin-top:5em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player33-1" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player33-2" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player33-3" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player33-4" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player33-5"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player33-6" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+
+			</div>
+			<div  style="background-color:#b2dfdb;" class="main-div">
+				<div style ="margin-top:12em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player33-7" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player33-8"  class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" style="margin-right:1em;">
+						<img id="player33-9" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+				<!-- fin fila 1-->
+				<div style ="margin-top:3em;" class="row">
+					<div style="margin-left:5em;" class="card col-3" >
+						<img id="player33-10" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player33-11" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+					<div class="card col-3" >
+						<img id="player33-12" class="card-img-top" src="{% static 'img/no-img.png' %}" alt="Card image cap">
+					</div>
+				</div>
+			</div>
+			<!-- fin pais 33 -->
+
+
+			<div style="background-image:url({% static 'img/fondo-album.jpg' %})"></div>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+
+
+
+function loadApp() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:922,
+
+			// Height
+
+			height:600,
+
+			// Elevation
+
+			elevation: 50,
+
+			// Enable gradients
+
+			gradients: true,
+
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+}
+
+// Load the HTML4 version if there's not CSS transform
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ["{% static 'js/turn.js' %}"],
+	nope: ["{% static 'js/turn.html4.min.js' %}"],
+	both: ["{% static 'css/basic.css' %}"],
+	complete: loadApp
+});
+
+</script>
+<script src="{% static 'js/jquery-3.2.1.slim.min.js' %}" ></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<script>
+
+  {% for f in figuritas %}
+    document.getElementById('player' +'{{f}}').src="../../static/img/figuritas/{{f}}.jpg";
+
+  {% endfor %}
+</script>
+</body>
+</html>

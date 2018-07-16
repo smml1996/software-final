@@ -8,14 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}" media="screen,projection">
 	<link href="{% static 'css/open-iconic-bootstrap.css' %}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/mystyles.css'%}">
+	<script src="{% static 'js/jquery-3.2.1.slim.min.js' %}" ></script>
+	<script src="{% static 'js/jquery.min.1.7.js' %}" ></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
 </head>
 <body style="height:100vh;">
 
 {% block content %}
 {% endblock %}
 
-<script src="{% static 'js/jquery-3.2.1.slim.min.js' %}" ></script>
-<script src="{% static 'js/popper.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
 </body>
 </html>
